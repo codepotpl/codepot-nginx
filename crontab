@@ -8,5 +8,6 @@ SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # m h dom mon dow usercommand
-0 *   * * *   root  logrotate /etc/logrotate.conf
+50-59 23    * * *    root  logrotate /etc/logrotate.conf
+0-10 0      * * *    root  logrotate /etc/logrotate.conf
 #
