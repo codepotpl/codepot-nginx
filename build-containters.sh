@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t codepotpl-nginx .
+docker build -t codepot-nginx .
