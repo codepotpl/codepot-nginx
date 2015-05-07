@@ -9,6 +9,6 @@ docker run -d --name codepot-nginx \
     -p 443:443 \
     -p 8080:8080 \
     -v /var/log/nginx/:/var/log/nginx \
-    -v /etc/nginx/ssl:/ssl \
+    -v /etc/ssl/codepot:/ssl \
     -v /home/codepot/codepot-webclient-staging/dist:/registration \
     codepot-nginx:latest
