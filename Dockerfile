@@ -11,6 +11,8 @@ ADD nginx.conf /etc/nginx/nginx.conf
 ADD conf/* /etc/nginx/conf.d/
 
 ADD logrotate.d/* /etc/logrotate.d/
+RUN chmod 644 /etc/logrotate.d/*
+
 ADD crontab /etc/crontab
 RUN chmod 644 /etc/crontab
 
