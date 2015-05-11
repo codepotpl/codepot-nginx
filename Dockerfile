@@ -18,7 +18,7 @@ RUN chmod 644 /etc/crontab
 
 VOLUME ["/var/cache/nginx", "/var/log/nginx"]
 
-EXPOSE 80 443 8080
+EXPOSE 80 443 8080 8443
 
 CMD   cron; \
       nginx -g "daemon off;"
