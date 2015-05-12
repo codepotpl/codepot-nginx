@@ -5,6 +5,7 @@ docker run -d --name codepot-nginx \
     --link codepot-production:codepot-production \
     --link codepot-staging:codepot-staging \
     --link codepotbackendstaging_django_1:codepotbackendstaging_django_1 \
+    --link codepotbackendproduction_django_1:codepotbackendproduction_django_1 \
     -p 80:80 \
     -p 443:443 \
     -p 8080:8080 \
