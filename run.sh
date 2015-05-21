@@ -13,4 +13,5 @@ docker run -d --name codepot-nginx \
     -v /var/log/nginx/:/var/log/nginx \
     -v /etc/ssl/codepot:/ssl \
     -v /home/codepot/codepot-webclient-staging/dist:/registration \
+    -v /var/files:/files \
     codepot-nginx:latest
