@@ -13,12 +13,8 @@ ADD conf/* /etc/nginx/conf.d/
 ADD logrotate.d/* /etc/logrotate.d/
 RUN chmod 644 /etc/logrotate.d/*
 
-ADD crontab /etc/crontab
-RUN chmod 644 /etc/crontab
-
 VOLUME ["/var/cache/nginx", "/var/log/nginx"]
 
-EXPOSE 80 443 8080 8443
+EXPOSE 8080 8443
 
-CMD   cron; \
-      nginx -g "daemon off;"
+CMD  nginx -g "daemon off;"

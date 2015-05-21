@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t codepot-nginx .
+docker build -t codepot-nginx-staging .
