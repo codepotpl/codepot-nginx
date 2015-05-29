@@ -7,5 +7,6 @@ docker run -d --name codepot-nginx-production \
     -p 80:80 \
     -p 443:443 \
     -v /var/log/nginx/:/var/log/nginx \
+    -v /home/codepot/codepot-webclient-production/dist:/registration \
     -v /etc/ssl/codepot:/ssl \
     codepot-nginx-production:latest
