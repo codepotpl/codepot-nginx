@@ -15,4 +15,4 @@ RUN chmod 644 /etc/logrotate.d/*
 
 VOLUME ["/var/cache/nginx", "/var/log/nginx"]
 
-CMD  nginx -g "daemon off;"
+CMD   ["nginx", "-g", "daemon off;"]
