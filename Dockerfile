@@ -10,9 +10,6 @@ RUN   apt-get update && \
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD conf/* /etc/nginx/conf.d/
 
-ADD logrotate.d/* /etc/logrotate.d/
-RUN chmod 644 /etc/logrotate.d/*
-
 VOLUME ["/var/cache/nginx", "/var/log/nginx"]
 
 CMD   ["nginx", "-g", "daemon off;"]
