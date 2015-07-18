@@ -1,5 +1,5 @@
 #!/bin/bash
-docker rm -f codepot-nginx-staging
+docker rm -f codepot-nginx-monitoring
 
 docker run -d --name codepot-nginx-monitoring \
     -p 8080:80 \
