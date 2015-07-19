@@ -6,4 +6,4 @@ docker run -d --name codepot-nginx-monitoring \
     -p 8443:443 \
     -v /var/log/nginx/:/var/log/nginx \
     -v /var/www/logs:/logs \
-    codepot-nginx-staging:latest
+    codepot-nginx-monitoring:latest
