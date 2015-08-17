@@ -1,6 +1,16 @@
 #!/bin/bash
-docker rm -f codepot-nginx-production
 
+#djangos=`docker ps --filter=name=codepotbackendproduction_django | grep django | sed 's/ \+/ /g' | cut -d ' ' -f 15-`
+#links=""
+#i=1
+#for django in $djangos;  do
+#	links="$links --link codepotbackendproduction_django_$i:$django"
+#	i=$((i+1))
+#	echo $i
+#done
+#echo $links
+
+docker rm -f codepot-nginx-production
 docker run -d --name codepot-nginx-production \
     --link codepot-production:codepot-production \
     --link codepotbackendproduction_django_1:codepotbackendproduction_django_1 \
@@ -12,3 +22,4 @@ docker run -d --name codepot-nginx-production \
     -v /home/codepot/codepot-webclient-production/dist:/registration \
     -v /etc/ssl/codepot:/ssl \
     codepot-nginx-production:latest
+
