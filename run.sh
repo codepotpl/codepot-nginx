@@ -13,6 +13,7 @@ docker rm -f codepot-nginx-production
 docker run -d --name codepot-nginx-production \
     $links \
     --link codepot-production:codepot-production \
+    --link codepotsurveyproduction_survey_1:codepotsurveyproduction_survey_1 \
     -p 80:80 \
     -p 443:443 \
     -v /var/log/nginx/:/var/log/nginx \
